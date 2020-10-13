@@ -11,7 +11,13 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        return this.averageEduLevel > o.averageEduLevel;
+        if (this.averageEduLevel == o.averageEduLevel) {
+            return 0;
+        } else if (this.averageEduLevel < o.averageEduLevel) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
     
     public double getLevel() {

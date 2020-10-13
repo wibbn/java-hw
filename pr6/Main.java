@@ -54,24 +54,26 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ArrayList<Student> s = new ArrayList<>();
+        ArrayList<Student> s1 = new ArrayList<>();
+        ArrayList<Student> s2 = new ArrayList<>();
 
-        s.add(new Student("Vasya", 18, 5.5));
-        s.add(new Student("Vova", 18, 6));
-        s.add(new Student("Vitya", 18, 4.4));
-        s.add(new Student("Vanya", 18, 6.3));
+        s1.add(new Student("Evklid", 18, 5.5));
+        s1.add(new Student("Kant", 18, 6));
+        s1.add(new Student("Aristotel", 18, 4.4));
+        s1.add(new Student("Dekart", 18, 6.3));
 
-        ArrayList<Student> ss = new ArrayList<>();
+        s2.add(new Student("Apofiy", 18, 3));
+        s2.add(new Student("Mikael", 18, 2.9));
+        s2.add(new Student("Maga", 18, 8.3));
+        s2.add(new Student("Maks", 18, 9));
 
-        ss.add(new Student("Misha", 18, 3));
-        ss.add(new Student("Mikael", 18, 2.9));
-        ss.add(new Student("Maga", 18, 8.3));
-        ss.add(new Student("Maks", 18, 9));
-        s.addAll(ss);
-        s = sortArray(s);
-        System.out.println(s);
+        s1.addAll(s2);
 
-        s = sortArray(s);
-        System.out.println(s);
+        s1 = sortArray(s1);
+        s2 = sortArray(s2);
+
+        System.out.println(s1);
+
+        System.out.println(s2);
     }
 }
